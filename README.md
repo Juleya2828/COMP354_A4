@@ -15,3 +15,8 @@ requests.
 
 The primary focus of this assignment is Git and GitHub collaboration, rather than
 advanced Python programming.
+
+
+
+
+the first commit has been made!!!!
