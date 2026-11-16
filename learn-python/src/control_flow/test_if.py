@@ -44,3 +44,21 @@ def test_grade_boundary():
         conclusion = 'not bad'
 
     assert conclusion == 'not bad'
+
+
+def test_youre_rich():
+    """IF statement"""
+
+    number = 1000000
+    conclusion = ''
+
+    if number < 10000:
+        conclusion = 'you are poor'
+    elif number == 10000:
+        conclusion = 'not bad'
+    elif number < 100000:
+        conclusion = 'work harder i trust you'
+    else:
+        conclusion = 'youre rich'
+
+    assert conclusion == 'youre rich'
