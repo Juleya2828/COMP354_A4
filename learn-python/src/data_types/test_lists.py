@@ -2,7 +2,7 @@
 
 # @see: https://www.learnpython.org/en/Lists
 # @see: https://docs.python.org/3/tutorial/introduction.html
-# @ee: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+# @see: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
 
 Python knows a number of compound data types, used to group together
 other values. The most versatile is the list, which can be written as a
@@ -73,6 +73,26 @@ def test_list_type():
     assert mixed_list == [['a', 'b', 'c'], [1, 2, 3]]
     assert mixed_list[0] == ['a', 'b', 'c']
     assert mixed_list[0][1] == 'b'
+
+
+def test_sorting_and_slicing_lists():
+    """Sorting a list and selecting a slice of its elements."""
+
+    scores = [82, 95, 70, 88]
+    sorted_scores = sorted(scores)
+
+    assert sorted_scores == [70, 82, 88, 95]
+    assert scores == [82, 95, 70, 88]  # sorted() leaves the original unchanged
+    assert sorted_scores[-2:] == [88, 95]  # the two highest scores
+
+
+def test_filtering_with_list_comprehension():
+    """Create a list containing only values that meet a condition."""
+
+    numbers = [1, 2, 3, 4, 5, 6]
+    even_squares = [number ** 2 for number in numbers if number % 2 == 0]
+
+    assert even_squares == [4, 16, 36]
 
 
 def test_list_methods():
