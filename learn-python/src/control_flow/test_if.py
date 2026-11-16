@@ -26,3 +26,21 @@ def test_if_statement():
         conclusion = 'Number bigger than or equal to one'
 
     assert conclusion == 'Number bigger than or equal to one'
+
+
+def test_grade_boundary():
+    """IF statement"""
+
+    number = 80
+    conclusion = ''
+
+    if number < 60:
+        conclusion = 'you need study '
+    elif number == 60:
+        conclusion = 'just pass'
+    elif number < 80:
+        conclusion = 'work harder '
+    else:
+        conclusion = 'not bad'
+
+    assert conclusion == 'not bad'
