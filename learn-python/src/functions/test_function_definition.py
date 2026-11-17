@@ -47,6 +47,18 @@ def fibonacci_function_example(number_limit):
     return fibonacci_list
 
 
+def format_greeting(name, greeting="Hello"):
+    """Return a greeting using a required name and an optional greeting."""
+    return f"{greeting}, {name}!"
+
+
+def percentage(part, whole):
+    """Return part as a percentage of whole, rejecting a zero denominator."""
+    if whole == 0:
+        raise ValueError("whole must not be zero")
+    return part / whole * 100
+
+
 def test_function_definition():
     """Function Definition"""
 
@@ -121,3 +133,21 @@ def test_function_definition():
     greet_with_closure = compose_greet_func_with_closure('John')
 
     assert greet_with_closure() == 'Hello there, John!'
+
+
+def test_function_parameters_and_return_value():
+    """Functions can use optional parameters and return computed values."""
+    assert format_greeting("Ada") == "Hello, Ada!"
+    assert format_greeting("Ada", greeting="Welcome") == "Welcome, Ada!"
+
+
+def test_function_input_validation():
+    """A function can validate its inputs and raise a clear exception."""
+    assert percentage(1, 4) == 25
+
+    try:
+        percentage(1, 0)
+    except ValueError as error:
+        assert str(error) == "whole must not be zero"
+    else:
+        raise AssertionError("percentage should reject a zero denominator")
