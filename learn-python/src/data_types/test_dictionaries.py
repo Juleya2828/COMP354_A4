@@ -78,7 +78,10 @@ def test_dictionary():
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
 
-    #Demonstrate retrieving dictionary values using get()
+ #Demonstrate retrieving dictionary values using get()
+ 
+ 
+def test_dictionary_get():
     student = {
         'name': 'Julia',
         'age': 21,
@@ -95,11 +98,11 @@ def test_dictionary():
     #handles missing values well
     assert student.get('grade', 'Not assigned') == 'Not assigned'
 
-        
-    # Demonstrate removing and retrieving entries using pop().
-    # this is useful when we want to remove an entry and see
-    # what the value was at the same time since it returns 
-    # the entry 
+# Demonstrate removing and retrieving entries using pop().
+# this is useful when we want to remove an entry and see
+# what the value was at the same time since it returns 
+# the entry 
+def test_dictionary_pop():     
     fruits = {
         'apple': 10,
         'banana': 5,
