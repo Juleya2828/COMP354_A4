@@ -33,7 +33,7 @@ def test_list_type():
     # All slice operations return a new list containing the requested elements.
     # This means that the following slice returns a new (shallow) copy of
     # the list:
-    assert squares[:] == [115, 4, 9, 16, 23]
+    assert squares[:] == [115, 4, 9, 16, 23, 80085]
 
     # Lists also support operations like concatenation:
     assert squares + [36, 49, 64, 81, 100] == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
