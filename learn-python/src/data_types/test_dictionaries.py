@@ -94,3 +94,21 @@ def test_dictionary():
     # Return a default value when the key does not exist.
     #handles missing values well
     assert student.get('grade', 'Not assigned') == 'Not assigned'
+
+        
+    # Demonstrate removing and retrieving entries using pop().
+    # this is useful when we want to remove an entry and see
+    # what the value was at the same time since it returns 
+    # the entry 
+    fruits = {
+        'apple': 10,
+        'banana': 5,
+        'orange': 8,
+    }
+
+    # Remove the banana entry and retrieve its value.
+    removed_quantity = fruits.pop('banana')
+    assert removed_quantity == 5
+
+    # Verify that banana no longer exists in the dictionary.
+    assert 'banana' not in fruits
