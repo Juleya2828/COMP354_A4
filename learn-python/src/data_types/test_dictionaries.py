@@ -77,3 +77,41 @@ def test_dictionary():
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098
+
+ #Demonstrate retrieving dictionary values using get()
+ 
+ 
+def test_dictionary_get():
+    student = {
+        'name': 'Julia',
+        'age': 21,
+        'major': 'Data Science',
+    }
+
+    # Retrieve an existing key.
+    assert student.get('name') == 'Julia'
+
+    # Return None when the key does not exist.
+    assert student.get('grade') is None
+
+    # Return a default value when the key does not exist.
+    #handles missing values well
+    assert student.get('grade', 'Not assigned') == 'Not assigned'
+
+# Demonstrate removing and retrieving entries using pop().
+# this is useful when we want to remove an entry and see
+# what the value was at the same time since it returns 
+# the entry 
+def test_dictionary_pop():     
+    fruits = {
+        'apple': 10,
+        'banana': 5,
+        'orange': 8,
+    }
+
+    # Remove the banana entry and retrieve its value.
+    removed_quantity = fruits.pop('banana')
+    assert removed_quantity == 5
+
+    # Verify that banana no longer exists in the dictionary.
+    assert 'banana' not in fruits
